@@ -1,4 +1,7 @@
 import React from "react";
+import HomePage from "./HomePage";
+import { Link } from 'react-router-dom';
+
 
 
 function NavBar() {
@@ -64,6 +67,7 @@ function NavBar() {
         </div>
 
             </div>
+
         </nav>
         </nav>
 
@@ -72,4 +76,4 @@ function NavBar() {
     );
 }
 
-export default NavBar;
+export default HomePage;

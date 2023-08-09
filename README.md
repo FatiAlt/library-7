@@ -1,33 +1,25 @@
-# Getting Started with Create React App
+# Sept Arche Librairie
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Création d'une application web d'une librairie spécialisée dans la vente de livres dans le domaine du cinéma.
+Stack: Create-react-app, Bootstrap
 
-## Available Scripts
-
-In the project directory, you can run:
+## Installation du projet
 
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Pour lancer l'app, télécharger la librairie Axios pour récupérer les données avec le serveur
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `npm install`
+Pour installer une librairie
 
 ### `npm run build`
+Pour construire le projet, lancer cette commande à chaque librairie installée
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm test`
+Pour lancer les tests
 
 ### `npm run eject`
 
@@ -39,32 +31,42 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Déploiement
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Installation initiale
+brew install heroku/brew/heroku
 
-### Code Splitting
+### Configuration de Heroku
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Créer un compte Heroku avec votre addresse octo puis demander les accès à Heroku à l'admin
 
-### Analyzing the Bundle Size
+2. Ajouter la ligne suivante à la fin de votre .bashrc ou .zshrc:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   `export HEROKU_ORGANIZATION=octo`
 
-### Making a Progressive Web App
+Cela permet de regarder si on a accès aux apps de l'environement Heroku:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. Dans le folder du projet, se connecter à Heroku avec `heroku login` lancer la commande `heroku apps`.
 
-### Advanced Configuration
+Normalement, il faudrait avoir un message comme celui-ci:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+askbob-front (eu)
+askbob-front-demo (eu)
+```
+Ajouter les remotes de heroku pour le deploy **depuis le répertoire du projet**:
 
-### Deployment
+<!-- heroku git:remote -a askbob-front
+heroku git:remote -a askbob-front-demo -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Pour l'env de demo:
 
-### `npm run build` fails to minify
+Aller sur https://dashboard.heroku.com/apps et selectionner l'app askbob-front-demo puis clicker sur le tab Settings pour avoir le lien git URL:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`git remote add herokudemo https://git.heroku.com/askbob-front-demo.git`
+
+
+### Integrate with your tools
+
+

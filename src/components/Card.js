@@ -33,8 +33,36 @@ const Card = ({ title, description, image, url}) => {
 
     )
 }
+ const card = this.props.books.map(book =>
+        {(
+        <div className="card">
+            <img
+            width="150"
+            height="150"
+            src={process.env.PUBLIC_URL + '/src/images-assets/0/citron.png'}
+            alt="citron"/>
+
+            <div className="card-body">
+                <div className="row">
+                    <div className="col-sm-6">
+                        <h4>{book.name}</h4>
+                    </div>
+                    <div className="card-body">
+                        <div className="row">
+                            <div className="col-sm-6">
+                                <p>
+                                    {book.description}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    )})
 
 
 
 
-export default Card;
+ export default Card;
