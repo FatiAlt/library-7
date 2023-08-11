@@ -39,34 +39,18 @@ brew install heroku/brew/heroku
 
 ### Configuration de Heroku
 
-1. Créer un compte Heroku avec votre addresse octo puis demander les accès à Heroku à l'admin
 
-2. Ajouter la ligne suivante à la fin de votre .bashrc ou .zshrc:
-
-   `export HEROKU_ORGANIZATION=octo`
-
-Cela permet de regarder si on a accès aux apps de l'environement Heroku:
-
-3. Dans le folder du projet, se connecter à Heroku avec `heroku login` lancer la commande `heroku apps`.
-
-Normalement, il faudrait avoir un message comme celui-ci:
-
-```
-askbob-front (eu)
-askbob-front-demo (eu)
-```
-Ajouter les remotes de heroku pour le deploy **depuis le répertoire du projet**:
 
 <!-- heroku git:remote -a askbob-front
 heroku git:remote -a askbob-front-demo -->
 
 ### Pour l'env de demo:
 
-Aller sur https://dashboard.heroku.com/apps et selectionner l'app askbob-front-demo puis clicker sur le tab Settings pour avoir le lien git URL:
-
-`git remote add herokudemo https://git.heroku.com/askbob-front-demo.git`
 
 
 ### Integrate with your tools
+
+### Serveur
+Télécharger la librairie AXIOS pour récupérer les données. 
 
 
