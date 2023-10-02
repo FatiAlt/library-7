@@ -3,7 +3,7 @@ import styles from './Product.module.css';
 
 class Product extends React.Component {
 
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
       isClicked: false
@@ -15,17 +15,23 @@ class Product extends React.Component {
   }
 
   render() {
-    const {product} = this.props;
+    const product = this.props.product;
+
     return (
       <div className={`card text-black ${styles.productCard}`}>
-        <img 
-          src={product.images[0]}
-          className="card-img-top" 
-          alt="Apple Computer" />
+        <img
+          src={product.images[0] ?? 'http://localhost:8081/articles'}
+          className="card-img-top"
+          alt="Product card" />
+
         <div className={`card-body ${styles.productCardBody}`}>
           <div className="text-center">
-            <h5 className="card-title">{product.title}</h5>
-            <p className="text-muted mb-4">{product.description}</p>
+            <h5 className="card-title">
+              {product.title}
+            </h5>
+            <p className="text-muted mb-4">
+              {product.description}
+            </p>
           </div>
           <div>
             <div className="d-flex justify-content-between">
@@ -33,11 +39,11 @@ class Product extends React.Component {
             </div>
           </div>
           <div className="d-flex justify-content-between total font-weight-bold mt-2">
-            <span>Price</span><span>${product.price}</span>
+            <span>Price</span><span>{product.price}</span>
           </div>
           <div className="d-flex justify-content-center total font-weight-bold mt-2">
             <button className='btn btn-dark' onClick={this.handleClick}>
-              {this.state.isClicked ? 'Im clicked': 'Click me'}
+              {this.state.isClicked ? 'Clicked' : 'Click me'}
             </button>
           </div>
         </div>
